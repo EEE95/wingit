@@ -1,0 +1,26 @@
+/*Variabler*/
+
+$bg-color: #EA6B4B;
+$primary-font: "Slackey", sans-serif;
+$secondary-font: "Luckiest Guy", sans-serif;
+$text-font: "Roboto", sans-serif;
+
+
+
+@mixin button{
+    background-color: $bg-color;
+    border-radius: 50px;
+    font-size: 3em;
+    font-family: $secondary-font;
+    font-weight: 500;
+    text-align: center;
+    padding: 20px 30px;
+    cursor: pointer;
+    box-shadow: 2px 4px rgba(0, 0, 0, 0.5);
+    border: none;
+    height: 100px;
+
+    &:hover {
+        background-color: #FBA792;
+    }
+}
