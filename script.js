@@ -141,4 +141,4 @@ const spørgsmål = [
     console.log(vælgTilfældigtSpørgsmål());
   }
   
-  resætSpillet();
+  resætSpillet();*/
