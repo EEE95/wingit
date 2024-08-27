@@ -24,3 +24,15 @@ $text-font: "Roboto", sans-serif;
         background-color: #FBA792;
     }
 }
+
+@mixin valgscreen{
+    background-image: url('../img/bg-blaa.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    max-width: 1200px;
+    min-height: 780px;
+    margin: 10vh auto;
+    position: relative;
+    z-index: 1;
+}

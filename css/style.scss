@@ -19,6 +19,7 @@ body{
     margin: 10vh auto;
     position: relative;
     z-index: 1;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -57,6 +58,7 @@ body{
     display: grid;
     grid-template-columns: 1fr 600px 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
 
         button{
             @include partial.button;
@@ -77,4 +79,167 @@ body{
                 padding-top: 10px;
             }
         }   
+}
+
+#avatar-container{
+    display: none;
+}
+
+#avatar-container.flex {
+    background-image: url('../img/bg-avatar.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    max-width: 1200px;
+    height: 780px;
+    margin: 10vh auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+    gap: 50px;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.avatar {
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    font-family: partial.$secondary-font;
+}
+
+.avatar img {
+    height: 300px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.avatar:hover img {
+    transform: scale(1.1);
+}
+
+h2{
+    margin-top: 20px;
+}
+
+.box {
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: left;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.blue-box {
+    background-color: #212A4E;
+    color: white;
+}
+
+.green-box {
+    background-color: #0B4733;
+    color: white;
+}
+
+.beige-box {
+    background-color: #F2EEE2;
+}
+
+.orange-box {
+    background-color: #EA6B4B;
+}
+
+
+//Info box
+.info-icon{
+    position: absolute;
+    top: 20px; 
+    right: 20px;
+    cursor: pointer;
+
+        img{
+            width: 85px;
+        }
+}
+
+.info-box {
+    display: none;
+    position: absolute;
+    border: 1px #000;
+    background: rgba(139, 167, 188, 0.97);
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+//Valg af rum
+
+
+.valgscreen2{
+    @include partial.valgscreen;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
+    
+
+    #rumh1{
+        font-family: partial.$secondary-font;
+        color: partial.$bg-color;
+        text-align: center;
+        font-size: 3em;
+        padding-top: 2.5em;
+    }
+
+    #spgsm2{
+        width: 9%;
+        padding: 1em;
+        float: right;
+
+        &:hover{
+            scale: 1.05;
+            transition: ease-in-out 300ms;
+        }
+    }
+
+    .avatar2{
+        width: 100%;
+        grid-area: 1 / 1 / 3 / 2;
+    }
+
+    #rumplacering2{
+        display: grid;
+        grid-template-columns: 15% 5% 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 15px;
+        max-width: 90%;
+        margin: 1.5em auto;
+
+        .img1{
+            grid-area: 1 / 3 / 2 / 4;
+         }
+
+         .img2{
+            grid-area: 1 / 4 / 2 / 5;
+         }
+
+         .img3{
+           grid-area: 2 / 3 / 3 / 4; 
+         }
+
+         .img4{
+            grid-area: 2 / 4 / 3 / 5;
+         }
+
+        .rumimg2{
+            width: 80%;
+            display: flex;
+            border: solid 1px black;
+            box-shadow: 2px 4px rgba(0, 0, 0, 0.25);
+            justify-content: center;
+
+            &:hover{
+                scale: 1.05;
+                transition: ease-in-out 300ms;
+            } 
+        }
+    }
+
 }
